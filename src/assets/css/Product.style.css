@@ -1,0 +1,7 @@
+linke div:hover::after {
+    background-color: red;
+    content: "add to cart";
+    font-size: 20px;
+
+
+}
