@@ -4,8 +4,10 @@ import Stock from './Stock';
 import { GrCaretPrevious } from "react-icons/gr";
 import { GrCaretNext } from "react-icons/gr";
 import { HiOutlineTrendingDown } from "react-icons/hi";
+import Aos from 'aos';
 
 const ProductsOnDiscount = () => {
+    Aos.init()
     const stocks = [
         {
             Name: "T-shirt",
@@ -102,8 +104,9 @@ const ProductsOnDiscount = () => {
                 <h2 className='text-4xl font-bold text-center uppercase py-6 text-green-700 underline'>Products on discount</h2>
                 <span><HiOutlineTrendingDown className='text-4xl text-red-400' /></span>
             </div>
-            <div className='mx-auto px-16'>
+            <div className='mx-auto px-16' data-aos="zoom-in">
                 <Slider
+
                     ref={slider => {
                         sliderRef = slider;
                     }}

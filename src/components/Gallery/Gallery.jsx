@@ -1,8 +1,10 @@
+import Aos from 'aos';
 import React from 'react';
 
 import PhotoAlbum from "react-photo-album";
 
 const Gallery = () => {
+    Aos.init()
     const photos = [
         { src: "https://img.freepik.com/free-photo/bride-bridesmaids-red-dresses-pose-outside-old-wet-street_8353-7114.jpg?size=626&ext=jpg&ga=GA1.1.714375242.1704945396&semt=ais", width: 800, height: 600 },
         { src: "https://img.freepik.com/free-photo/young-woman-celebrating-her-quinceanera_23-2149449193.jpg?size=626&ext=jpg&ga=GA1.1.714375242.1704945396&semt=ais", width: 1600, height: 900 },
@@ -19,7 +21,10 @@ const Gallery = () => {
         { src: "https://img.freepik.com/free-photo/group-children-wearing-stylish-cloth-sitting-bench-posing-isolated-grey-studio-background_155003-45973.jpg?size=626&ext=jpg&ga=GA1.1.714375242.1704945396&semt=ais", width: 1600, height: 900 },
     ];
     return (
-        <div className='w-[90%] mx-auto my-20'>
+        <div className='w-[90%] mx-auto my-20'
+            data-aos="fade-up"
+            data-aos-anchor-placement="center-bottom"
+        >
             <h2 className='text-3xl uppercase text-center pb-10 text-sky-600'>Our Rich <b className='text-green-700'>Gallery</b></h2>
             <PhotoAlbum layout="columns" photos={photos} />
 

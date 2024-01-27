@@ -1,10 +1,19 @@
 import React from 'react';
 import { IoRemoveOutline } from "react-icons/io5";
-
+import AOS from 'aos';
 
 const DealOfWeek = () => {
+    AOS.init();
     return (
-        <div className='py-20 pl-32 bg-amber-100 my-10 flex justify-between items-center'>
+        <div
+            className='py-20 pl-32 bg-amber-100 my-10 flex justify-between items-center' data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            data-aos-once="false"
+            data-aos-anchor-placement="top-center">
             <div>
                 <div className='flex jusitfy-start items-center'>
                     <span><IoRemoveOutline className='text-orange-400 text-4xl w-42' /></span> <p className='text-lg text-orange-400'>Deal of the week</p>
@@ -14,7 +23,7 @@ const DealOfWeek = () => {
             </div>
 
             <img className='mr-20 h-96' src="https://cdn.shopify.com/s/files/1/0050/8402/0810/files/dress1_9f25c176-1cc8-4d8d-884e-daa04410f137_600x600.jpg?v=1697434769" alt="" />
-        </div>
+        </div >
     );
 };
 

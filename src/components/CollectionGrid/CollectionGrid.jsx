@@ -4,12 +4,23 @@ import mancollection from "../../assets/images/sliders/collectiongrid/mancollect
 import kidzcollection from "../../assets/images/sliders/collectiongrid/kidzcollection.png"
 import giftcard from "../../assets/images/sliders/collectiongrid/giftcard.png"
 import { Link } from 'react-router-dom';
+import AOS from 'aos';
 
 const CollectionGrid = () => {
+    // ..
+    AOS.init();
     return (
-        <section className='mx-32 my-32 '>
+        <section className='mx-32 my-32 ' >
             <div className='flex justify-between items-stretch  gap-6'>
-                <div className='w-1/2 flex justify-center items-around bg-gray-200 '>
+                <div className='w-1/2 flex justify-center items-around bg-gray-200 ' data-aos="fade-right"
+                    data-aos-offset="200"
+                    data-aos-delay="50"
+                    data-aos-duration="2000"
+                    data-aos-easing="ease-in-out"
+                    data-aos-mirror="true"
+                    data-aos-once="false"
+                    data-aos-anchor-placement="top-center"
+                >
                     <div className='flex justify-between items-end '>
                         <div className='absolute text-left pl-6 mb-10'>
                             <p className='text-xs mb-2'>Trending Products</p>
@@ -19,7 +30,16 @@ const CollectionGrid = () => {
                         <img src={womandress} className='h-96 ml-24' alt="" />
                     </div>
                 </div>
-                <div className='w-1/2 flex flex-col justify-between gap-6 '>
+                <div className='w-1/2 flex flex-col justify-between gap-6 '
+                    data-aos-offset="200"
+                    data-aos-delay="50"
+                    data-aos-duration="1000"
+                    data-aos-easing="ease-in-out"
+                    data-aos-mirror="true"
+                    data-aos-once="false"
+                    data-aos-anchor-placement="top-center"
+
+                    data-aos="fade-left">
                     <div className='flex justify-between items-end bg-blue-100 py-10 gap-6 px-10 ' >
                         <div className='flex flex-col justify-center items-start '>
                             <p className='text-xs mb-2'>Trending Products</p>
@@ -49,6 +69,8 @@ const CollectionGrid = () => {
                 </div>
             </div>
         </section>
+
+
     );
 };
 

@@ -7,9 +7,10 @@ import toddler from "../../assets/images/sliders/toddler..png"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import '../../assets/css/Carousel.style.css'
+import Aos from 'aos';
 
 const Carousel = () => {
-
+    Aos.init()
     const settings = {
         dots: true,
         infinite: true,
@@ -36,8 +37,8 @@ const Carousel = () => {
             title: "Woman Summary",
             text: "An exclusive selection of the women special",
             bgImage: backSliderImg,
-            src: woman,
-        },
+            src: woman
+        }
 
     ]
     return (
@@ -49,7 +50,10 @@ const Carousel = () => {
             <Slider {...settings} >
                 {
                     sliderData.map((data, index) =>
-                        <div key={index} >
+                        <div key={index}
+                            data-aos="fade-up"
+                            data-aos-anchor-placement="center-center"
+                        >
                             <div className='flex justify-between items-center h-screen'
                             >
                                 <div className='w-1/2 text-left flex justify-center items-center py-20' >

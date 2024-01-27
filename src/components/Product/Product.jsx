@@ -1,16 +1,23 @@
-import React, { useState } from 'react';
+import Aos from 'aos';
+import React from 'react';
 import { CiHeart } from "react-icons/ci";
 import { Link } from 'react-router-dom';
 
 
 const Product = ({ product }) => {
+    Aos.init()
     const { type, price, review, quantity, category, srcURL, Name } = product
 
     return (
-        <section className='mx-auto w-fit p-12 '>
+        <section className='mx-auto w-fit p-12'>
 
             {/* card */}
-            <div className="card w-72 shadow-xl h-fit group">
+            <div className="card w-72 shadow-xl h-fit group"
+                data-aos="flip-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000"
+
+            >
                 <div className='relative overflow-hidden border border-gray-300 rounded-2xl'>
                     <figure><img src={srcURL} className='h-60 w-full rounded-t-xl' alt="dress" /></figure>
                     <div className='py-4 px-6'>

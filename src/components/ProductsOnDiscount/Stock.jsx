@@ -1,13 +1,17 @@
+import Aos from 'aos';
 import React from 'react';
 import { CiHeart } from "react-icons/ci";
 import { Link } from 'react-router-dom';
 
 const Stock = ({ stock }) => {
+    Aos.init()
     const { Name, type, price, review, quantity, category, srcURL } = stock
     return (
         <section className='mx-auto h-fit w-fit p-4 mb-6'>
-            <div className="card w-60 shadow-xl h-70 group border border-orange-400 rounded-xl">
-                <div className=' '>
+            <div className="card w-60 shadow-xl h-70 group border border-orange-400 rounded-xl"
+                data-aos="zoom-out-up"
+            >
+                <div>
                     <figure><img src={srcURL} className='h-40 w-64 rounded-t-xl' alt="dress" /></figure>
                     <div className='py-2 px-4 bg-blue-200'>
                         <div className='flex justify-between items-center'>

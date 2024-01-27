@@ -12,8 +12,8 @@ const Home = () => {
         <div>
             <Carousel />
             <CollectionGrid />
-            <Products />
             <DealOfWeek />
+            <Products />
             <OurSpeciality />
             <ProductsOnDiscount />
             <Gallery />
