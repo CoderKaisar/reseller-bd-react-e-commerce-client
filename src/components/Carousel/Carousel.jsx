@@ -7,10 +7,9 @@ import toddler from "../../assets/images/sliders/toddler..png"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import '../../assets/css/Carousel.style.css'
-import Aos from 'aos';
 
 const Carousel = () => {
-    Aos.init()
+
     const settings = {
         dots: true,
         infinite: true,
@@ -50,22 +49,18 @@ const Carousel = () => {
             <Slider {...settings} >
                 {
                     sliderData.map((data, index) =>
-                        <div key={index}
-                            data-aos="fade-up"
-                            data-aos-anchor-placement="center-center"
-                        >
-                            <div className='flex justify-between items-center h-screen'
-                            >
+                        <div key={index}>
+                            <div className='flex justify-between items-center w-screen py-10'>
                                 <div className='w-1/2 text-left flex justify-center items-center py-20' >
                                     <div className='flex flex-col justify-start items-start text-gray-600 gap-6 pl-12 text-amber-800 text-black'>
-                                        <h2 className='text-6xl font-semibold uppercase '>{data.title}</h2>
-                                        <p className='text-xl'>{data.text}</p>
+                                        <h2 className='lg:text-6xl md:text-3xl sm:text-2xl font-semibold uppercase '>{data.title}</h2>
+                                        <p className='lg:text-xl md:text-xl sm:text-xs'>{data.text}</p>
                                         <button className='bg-blue-400 rounded-lg text-white px-2 py-2 hover:bg-orange-300'>Discover More</button>
 
                                     </div>
                                 </div>
                                 <div className='w-1/2 ' >
-                                    <img className='h-[800px] w-[800px]' src={data.src} alt="" />
+                                    <img className='lg:h-[600px] sm:h-72  w-[900px] sm:w-96' src={data.src} alt="" />
                                 </div>
                             </div>
                         </div>)

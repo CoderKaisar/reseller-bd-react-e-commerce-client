@@ -1,9 +1,9 @@
 import React from 'react';
 import Product from '../Product/Product';
-import Aos from 'aos';
+
 
 const Products = () => {
-    Aos.init()
+
     const productsData = [
         {
             Name: "T-shirt",
@@ -81,12 +81,7 @@ const Products = () => {
     return (
         <div>
             <h2 className='uppercase text-4xl text-center py-10 font-semibold'>Our Products <b>Shop</b></h2>
-            <div className='mx-24 grid grid-cols-4 gap-6 mb-20'
-                data-aos="flip-left"
-                data-aos-easing="ease-out-cubic"
-                data-aos-duration="2000"
-
-            >
+            <div className='lg:mx-24 md:mx-10 sm:mx-4 grid md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-4 gap-6 mb-20'>
                 {
                     productsData.map((product, i) => <Product key={i} product={product} />)
                 }

@@ -89,6 +89,8 @@ const ProductsOnDiscount = () => {
     const previous = () => {
         sliderRef.slickPrev();
     };
+
+
     let settings = {
         dots: false,
         infinite: true,

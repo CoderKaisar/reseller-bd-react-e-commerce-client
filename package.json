@@ -12,6 +12,8 @@
   "dependencies": {
     "@react-spring/web": "^9.7.3",
     "aos": "^3.0.0-beta.6",
+    "firebase": "^10.7.2",
+    "firebaseui": "^6.1.0",
     "framer-motion": "^11.0.3",
     "lightgallery": "^2.7.2",
     "localforage": "^1.10.0",
@@ -28,6 +30,7 @@
     "react-swift-reveal": "^1.0.4",
     "slick-carousel": "^1.8.1",
     "sort-by": "^1.2.0",
+    "sweetalert2": "^11.10.4",
     "three": "^0.160.1"
   },
   "devDependencies": {

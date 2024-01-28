@@ -9,7 +9,7 @@ const Product = ({ product }) => {
     const { type, price, review, quantity, category, srcURL, Name } = product
 
     return (
-        <section className='mx-auto w-fit p-12'>
+        <section className='mx-auto w-fit lg:p-12 sm:p-2'>
 
             {/* card */}
             <div className="card w-72 shadow-xl h-fit group"
